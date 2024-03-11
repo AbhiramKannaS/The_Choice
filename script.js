@@ -36,7 +36,7 @@ function draw() {
 }
 
 // Loop the animation
-setInterval(draw, 33);
+setInterval(draw, 28);
 
 // Typewriter animation on <pre> element
 var preElement = document.querySelector('pre');
