@@ -37,3 +37,19 @@ function draw() {
 
 // Loop the animation
 setInterval(draw, 33);
+
+// Typewriter animation on <pre> element
+var preElement = document.querySelector('pre');
+var text = preElement.textContent;
+preElement.textContent = '';
+
+var index = 0;
+function typeWriter() {
+  if (index < text.length) {
+    preElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 50); // Adjust the typing speed here (in milliseconds)
+  }
+}
+
+typeWriter();
